@@ -21,7 +21,7 @@ export default function HomePage() {
         content !== ""
             ? post._doc.title.toLowerCase().includes(content.toLowerCase()) || post._doc.content.toLowerCase().includes(content.toLowerCase())
                 ? <div key={post._doc.postId} className={styles.thumbnail}>
-                    <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                    <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                         <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                         <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                         <h3>{post._doc.title}</h3>
@@ -31,7 +31,7 @@ export default function HomePage() {
                 </div>
                 : ""
             : <div key={post._doc.postId} className={styles.thumbnail}>
-                <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                     <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                     <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                     <h3>{post._doc.title}</h3>
@@ -46,7 +46,7 @@ export default function HomePage() {
             content !== ""
                 ? post._doc.title.toLowerCase().includes(content.toLowerCase()) || post._doc.content.toLowerCase().includes(content.toLowerCase())
                     ? <div key={post._doc.postId} className={styles.thumbnail}>
-                        <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                        <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                             <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                             <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                             <h3>{post._doc.title}</h3>
@@ -56,7 +56,7 @@ export default function HomePage() {
                     </div>
                     : ""
                 : <div key={post._doc.postId} className={styles.thumbnail}>
-                    <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                    <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                         <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                         <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                         <h3>{post._doc.title}</h3>
@@ -78,7 +78,7 @@ export default function HomePage() {
                 content !== ""
                     ? post._doc.title.toLowerCase().includes(content.toLowerCase()) || post._doc.content.toLowerCase().includes(content.toLowerCase())
                         ? <div key={post._doc.postId} className={styles.thumbnail}>
-                            <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                            <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                                 <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                                 <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                                 <h3>{post._doc.title}</h3>
@@ -88,7 +88,7 @@ export default function HomePage() {
                         </div>
                         : ""
                     : <div key={post._doc.postId} className={styles.thumbnail}>
-                        <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                        <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                             <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                             <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                             <h3>{post._doc.title}</h3>
@@ -111,7 +111,7 @@ export default function HomePage() {
                 content !== ""
                     ? post._doc.title.toLowerCase().includes(content.toLowerCase()) || post._doc.content.toLowerCase().includes(content.toLowerCase())
                         ? <div key={post._doc.postId} className={styles.thumbnail}>
-                            <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                            <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                                 <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                                 <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                                 <h3>{post._doc.title}</h3>
@@ -121,7 +121,7 @@ export default function HomePage() {
                         </div>
                         : ""
                     : <div key={post._doc.postId} className={styles.thumbnail}>
-                        <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                        <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                             <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                             <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                             <h3>{post._doc.title}</h3>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 content !== ""
                     ? post._doc.title.toLowerCase().includes(content.toLowerCase()) || post._doc.content.toLowerCase().includes(content.toLowerCase())
                         ? <div key={post._doc.postId} className={styles.thumbnail}>
-                            <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                            <Link to={`/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                                 <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                                 <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                                 <h3>{post._doc.title}</h3>
@@ -154,7 +154,7 @@ export default function HomePage() {
                         </div>
                         : ""
                     : <div key={post._doc.postId} className={styles.thumbnail}>
-                        <Link to={`posts/${post._doc.postId.toString()}`} className={styles.navlink}>
+                        <Link to={`/capysocial-client/capysocial-client/posts/${post._doc.postId.toString()}`} className={styles.navlink}>
                             <p>Posted by <strong>{post.userName}</strong> on {post._doc.date}</p>
                             <p>upvotes: {post.postVotes.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0)}</p>
                             <h3>{post._doc.title}</h3>

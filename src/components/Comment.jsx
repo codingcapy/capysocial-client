@@ -55,7 +55,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
         toggleReplyMode()
         if (res?.data.success) {
             e.target.content.value = "";
-            navigate(`/posts/${parentPostId}`);
+            navigate(`/capysocial-client/posts/${parentPostId}`);
         }
     }
 
@@ -72,7 +72,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
         const updatedComment = { content, postId, userId, votes, date, lastEdit, commentId, edited, deleted };
         const res = await axios.post(`${DOMAIN}/api/comments/delete/${commentId}`, updatedComment)
         if (res?.data.success) {
-            navigate(`/posts/${postId}`)
+            navigate(`/capysocial-client/posts/${postId}`)
         }
     }
 
@@ -90,7 +90,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
         const res = await axios.post(`${DOMAIN}/api/comments/${commentId}`, updatedComment)
         toggleCommentEditMode()
         if (res?.data.success) {
-            navigate(`/posts/${postId}`)
+            navigate(`/capysocial-client/posts/${postId}`)
         }
     }
 
@@ -103,7 +103,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
             const vote = { value, postId, commentId, voterId, };
             const res = await axios.post(`${DOMAIN}/api/commentvotes`, vote);
             if (res?.data.success) {
-                navigate(`/posts/${parentPostId}`);
+                navigate(`/capysocial-client/posts/${parentPostId}`);
             }
         }
         else if (commentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === 0 || commentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === -1) {
@@ -115,7 +115,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
             const updatedVote = { value, postId, commentId, voterId, commentVoteId }
             const res = await axios.post(`${DOMAIN}/api/commentvotes/${commentVoteId}`, updatedVote)
             if (res?.data.success) {
-                navigate(`/posts/${parentPostId}`);
+                navigate(`/capysocial-client/posts/${parentPostId}`);
             }
         }
     }
@@ -129,7 +129,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
         const updatedVote = { value, postId, commentId, voterId, commentVoteId }
         const res = await axios.post(`${DOMAIN}/api/commentvotes/${commentVoteId}`, updatedVote)
         if (res?.data.success) {
-            navigate(`/posts/${parentPostId}`);
+            navigate(`/capysocial-client/posts/${parentPostId}`);
         }
     }
 
@@ -142,7 +142,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
             const vote = { value, postId, commentId, voterId, };
             const res = await axios.post(`${DOMAIN}/api/commentvotes`, vote);
             if (res?.data.success) {
-                navigate(`/posts/${parentPostId}`);
+                navigate(`/capysocial-client/posts/${parentPostId}`);
             }
         }
         else if (commentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === 0 || commentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === 1) {
@@ -154,7 +154,7 @@ export default function Comment({ parentContent, parentPostId, parentUserId, use
             const updatedVote = { value, postId, commentId, voterId, commentVoteId }
             const res = await axios.post(`${DOMAIN}/api/commentvotes/${commentVoteId}`, updatedVote)
             if (res?.data.success) {
-                navigate(`/posts/${parentPostId}`);
+                navigate(`/capysocial-client/posts/${parentPostId}`);
             }
         }
     }

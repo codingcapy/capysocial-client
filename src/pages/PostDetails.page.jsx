@@ -50,7 +50,7 @@ export default function PostDetailsPage() {
         const res = await axios.post(`${DOMAIN}/api/comments`, newComment);
         if (res?.data.success) {
             e.target.content.value = "";
-            navigate(`/posts/${post.post._doc.postId}`);
+            navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
         }
     }
 
@@ -69,7 +69,7 @@ export default function PostDetailsPage() {
         if (res?.data.success) {
             e.target.title.value = "";
             e.target.content.value = "";
-            navigate(`/posts/${post.post._doc.postId}`);
+            navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
         }
     }
 
@@ -84,7 +84,7 @@ export default function PostDetailsPage() {
         const updatedPost = { title, content, userId, date, edited, deleted, postId };
         const res = await axios.post(`${DOMAIN}/api/posts/delete/${post.post._doc.postId}`, updatedPost);
         if (res?.data.success) {
-            navigate(`/posts/${post.post._doc.postId}`);
+            navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
         }
     }
 
@@ -96,7 +96,7 @@ export default function PostDetailsPage() {
             const vote = { value, postId, voterId };
             const res = await axios.post(`${DOMAIN}/api/votes`, vote);
             if (res?.data.success) {
-                navigate(`/posts/${post.post._doc.postId}`);
+                navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
             }
         }
         else if (post.postVotes.filter((postVote) => postVote.voterId === parseInt(userId))[0].value === 0 || post.postVotes.filter((postVote) => postVote.voterId === parseInt(userId))[0].value === -1) {
@@ -107,7 +107,7 @@ export default function PostDetailsPage() {
             const updatedVote = { value, postId, voterId, postVoteId }
             const res = await axios.post(`${DOMAIN}/api/votes/${postVoteId}`, updatedVote)
             if (res?.data.success) {
-                navigate(`/posts/${post.post._doc.postId}`);
+                navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
             }
         }
     }
@@ -120,7 +120,7 @@ export default function PostDetailsPage() {
         const updatedVote = { value, postId, voterId, postVoteId }
         const res = await axios.post(`${DOMAIN}/api/votes/${postVoteId}`, updatedVote)
         if (res?.data.success) {
-            navigate(`/posts/${post.post._doc.postId}`);
+            navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
         }
     }
 
@@ -132,7 +132,7 @@ export default function PostDetailsPage() {
             const vote = { value, postId, voterId };
             const res = await axios.post(`${DOMAIN}/api/votes`, vote);
             if (res?.data.success) {
-                navigate(`/posts/${post.post._doc.postId}`);
+                navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
             }
         }
         else if (post.postVotes.filter((postVote) => postVote.voterId === parseInt(userId))[0].value === 0 || post.postVotes.filter((postVote) => postVote.voterId === parseInt(userId))[0].value === 1) {
@@ -143,7 +143,7 @@ export default function PostDetailsPage() {
             const updatedVote = { value, postId, voterId, postVoteId }
             const res = await axios.post(`${DOMAIN}/api/votes/${postVoteId}`, updatedVote)
             if (res?.data.success) {
-                navigate(`/posts/${post.post._doc.postId}`);
+                navigate(`/capysocial-client/posts/${post.post._doc.postId}`);
             }
         }
     }

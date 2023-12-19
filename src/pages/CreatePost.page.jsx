@@ -38,7 +38,7 @@ export default function CreatePostPage() {
         const newPost = { title, content, userId, date, edited, deleted }
         const res = await axios.post(`${DOMAIN}/api/posts`, newPost)
         if (res?.data.success) {
-            navigate("/")
+            navigate("/capysocial-client/")
         }
     }
 

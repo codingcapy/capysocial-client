@@ -52,7 +52,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
         const updatedComment = { content, postId, commentId, userId, date, edited, deleted, nestedCommentId };
         const res = await axios.post(`${DOMAIN}/api/nested/delete/${nestedCommentId}`, updatedComment)
         if (res?.data.success) {
-            navigate(`/posts/${postId}`)
+            navigate(`/capysocial-client/posts/${postId}`)
         }
     }
 
@@ -70,7 +70,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
         toggleReplyMode()
         if (res?.data.success) {
             e.target.content.value = "";
-            navigate(`/posts/${postId}`);
+            navigate(`/capysocial-client/posts/${postId}`);
         }
     }
 
@@ -88,7 +88,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
         const res = await axios.post(`${DOMAIN}/api/nested/${nestedCommentId}`, updatedComment)
         toggleCommentEditMode()
         if (res?.data.success) {
-            navigate(`/posts/${postId}`)
+            navigate(`/capysocial-client/posts/${postId}`)
         }
     }
 
@@ -102,7 +102,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
             const vote = { value, postId, commentId, nestedCommentId, voterId, };
             const res = await axios.post(`${DOMAIN}/api/nestedcommentvotes`, vote);
             if (res?.data.success) {
-                navigate(`/posts/${cascadedPostId}`);
+                navigate(`/capysocial-client/posts/${cascadedPostId}`);
             }
         }
         else if (cascadedNestedCommentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === 0 || cascadedNestedCommentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === -1) {
@@ -115,7 +115,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
             const updatedVote = { value, postId, commentId, nestedCommentId, voterId, nestedCommentVoteId }
             const res = await axios.post(`${DOMAIN}/api/nestedcommentvotes/${nestedCommentVoteId}`, updatedVote)
             if (res?.data.success) {
-                navigate(`/posts/${cascadedPostId}`);
+                navigate(`/capysocial-client/posts/${cascadedPostId}`);
             }
         }
     }
@@ -130,7 +130,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
         const updatedVote = { value, postId, commentId, nestedCommentId, voterId, nestedCommentVoteId }
         const res = await axios.post(`${DOMAIN}/api/nestedcommentvotes/${nestedCommentVoteId}`, updatedVote)
         if (res?.data.success) {
-            navigate(`/posts/${cascadedPostId}`);
+            navigate(`/capysocial-client/posts/${cascadedPostId}`);
         }
     }
 
@@ -144,7 +144,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
             const vote = { value, postId, commentId, nestedCommentId, voterId, };
             const res = await axios.post(`${DOMAIN}/api/nestedcommentvotes`, vote);
             if (res?.data.success) {
-                navigate(`/posts/${cascadedPostId}`);
+                navigate(`/capysocial-client/posts/${cascadedPostId}`);
             }
         }
         else if (cascadedNestedCommentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === 0 || cascadedNestedCommentVotes.filter((commentVote) => commentVote.voterId === parseInt(userId))[0].value === 1) {
@@ -157,7 +157,7 @@ export default function NestedComment({ cascadedContent, cascadedPostId, cascade
             const updatedVote = { value, postId, commentId, nestedCommentId, voterId, nestedCommentVoteId }
             const res = await axios.post(`${DOMAIN}/api/nestedcommentvotes/${nestedCommentVoteId}`, updatedVote)
             if (res?.data.success) {
-                navigate(`/posts/${cascadedPostId}`);
+                navigate(`/capysocial-client/posts/${cascadedPostId}`);
             }
         }
     }

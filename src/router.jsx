@@ -28,14 +28,17 @@ export function Router() {
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route element={<Layout />}>
-                <Route path='/' element={<HomePage />} loader={pageLoader} />
-                <Route path='/posts' element={<PostsPage />} loader={pageLoader} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/signup" element={<SignupPage />} />
-                <Route path='/posts/:postId' element={<PostDetailsPage />} loader={postDetailsLoader} />
-                <Route path="/posts/create" element={<ProtectedRoute isAllowed={!!authCheck}><CreatePostPage /></ProtectedRoute>} />
-                <Route path="/users/:userId" element={<ProtectedRoute isAllowed={!!authCheck}><ProfilePage /></ProtectedRoute>} loader={userPostsLoader} />
-                <Route path='/maintenance' element={<MaintenancePage />} />
+                <Route path='/capysocial-client/maintenance' element={<HomePage />} loader={pageLoader} />
+                <Route path='/capysocial-client/maintenance2' element={<PostsPage />} loader={pageLoader} />
+                <Route path="/capysocial-client/maintenance3" element={<LoginPage />} />
+                <Route path="/capysocial-client/maintenance4" element={<SignupPage />} />
+                <Route path='/capysocial-client/posts/:postId' element={<PostDetailsPage />} loader={postDetailsLoader} />
+                <Route path="/capysocial-client/posts/create" element={<ProtectedRoute isAllowed={!!authCheck}><CreatePostPage /></ProtectedRoute>} />
+                <Route path="/capysocial-client/users/:userId" element={<ProtectedRoute isAllowed={!!authCheck}><ProfilePage /></ProtectedRoute>} loader={userPostsLoader} />
+                <Route path='/capysocial-client/' element={<MaintenancePage />} />
+                <Route path='/capysocial-client/posts' element={<MaintenancePage />} />
+                <Route path='/capysocial-client/login' element={<MaintenancePage />} />
+                <Route path='/capysocial-client/signup' element={<MaintenancePage />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         )

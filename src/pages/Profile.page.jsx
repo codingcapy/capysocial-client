@@ -38,7 +38,7 @@ export default function ProfilePage() {
         if (res?.data.success) {
             e.target.title.value = "";
             e.target.content.value = "";
-            navigate(`/users/${userId}`);
+            navigate(`/capysocial-client/users/${userId}`);
         }
     }
 
@@ -57,7 +57,7 @@ export default function ProfilePage() {
                 {message}
             <h2>Your Posts</h2>
             {incomingData.posts.length === 0 ? <p>You haven't posted anything yet!</p> : incomingData.posts.map((post) => <div key={post.postId} className={styles.thumbnail}>
-                <Link to={`/posts/${post.postId.toString()}`} className={styles.navlink}>
+                <Link to={`/capysocial-client/posts/${post.postId.toString()}`} className={styles.navlink}>
                     <p>Posted by @{user.username} on {post.date}</p>
                     <h3>{post.title}</h3>
                     <p>{post.content}</p>
@@ -65,14 +65,14 @@ export default function ProfilePage() {
             </div>)}
             <h2>Your Comments</h2>
             {incomingData.comments.length === 0 ? <p>You haven't added any comments yet!</p> : incomingData.comments.map((comment) => <div key={comment.commentId} className={styles.thumbnail}>
-                <Link to={`/posts/${comment.postId.toString()}`} className={styles.navlink}>
+                <Link to={`/capysocial-client/posts/${comment.postId.toString()}`} className={styles.navlink}>
                     <p><strong>{user.username}</strong> {comment.date}</p>
                     <p>{comment.content}</p>
                 </Link>
             </div>)}
             <h2>Your Nested Comments</h2>
             {incomingData.nestedComments.length === 0 ? <p>You haven't added any nested comments yet!</p> : incomingData.nestedComments.map((comment) => <div key={comment.nestedcommentId} className={styles.thumbnail}>
-                <Link to={`/posts/${comment.postId.toString()}`} className={styles.navlink}>
+                <Link to={`/capysocial-client/posts/${comment.postId.toString()}`} className={styles.navlink}>
                     <p><strong>{user.username}</strong> {comment.date}</p>
                     <p>{comment.content}</p>
                 </Link>

@@ -25,7 +25,7 @@ export default function SignupPage() {
         const res = await axios.post(`${DOMAIN}/api/users/`, newUser)
         if (res?.data.success) {
             setMessage(res?.data.message)
-            navigate("/login")
+            navigate("/capysocial-client/login")
         }
         else{
             setMessage(res?.data.message)

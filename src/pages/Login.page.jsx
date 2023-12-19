@@ -20,7 +20,7 @@ export default function LoginPage() {
 
     useEffect(() => {
         if (!!user) {
-            navigate("/posts")
+            navigate("/capysocial-client/posts")
         }
     }, [user])
 
