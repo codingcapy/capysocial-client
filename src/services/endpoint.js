@@ -6,6 +6,6 @@ version: 1.0
 description: endpoint for social platform 1 project
  */
 
-const DOMAIN = 'https://capysocial.onrender.com';
+const DOMAIN = 'https://capysocial-server-production.up.railway.app';
 
 export default DOMAIN;
