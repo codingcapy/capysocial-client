@@ -1,0 +1,88 @@
+/*
+author: Paul Kim
+date: November 13, 2023
+version: 1.0
+description: psot details page css for social platform 1 project
+ */
+
+.page {
+    margin: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #242424;
+    border: solid 1px rgba(255, 255, 255, 0.7);
+}
+
+.title {
+    text-align: center;
+}
+
+.comment {
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.input {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.submitBtn {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    max-width: 100px;
+}
+
+.commentBtn {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(122, 122, 122);
+    color: white;
+    max-width: 100px;
+}
+
+.cancelBtn {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(122, 122, 122);
+    color: white;
+    max-width: 100px;
+}
+
+.editBtn {
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.editBtn:hover {
+    background-color: rgb(124, 124, 124);
+}
+
+.textarea {
+    border-radius: 10px;
+    border: solid 1px white;
+    background-color: #242424;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    white-space: pre-wrap;
+}
+
+.voteBtn:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,88 @@
+/*
+author: Paul Kim
+date: November 13, 2023
+version: 1.0
+description: app css for CapySocial
+ */
+
+#root {
+  margin: 0 auto;
+}
+
+header {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px rgb(160, 160, 160);
+  text-align: center;
+  background-color: #242424;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+header a {
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all ease 0.5s;
+}
+
+header a:hover {
+  background-color: rgb(124, 124, 124);
+  transition: all ease 0.5s;
+}
+
+main {
+  flex: 1;
+  margin: auto;
+  max-width: 1200px;
+}
+
+footer {
+  text-align: center;
+}
+
+.headerdiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger {
+  font-size: 30px;
+  display: block;
+}
+
+.header-collapsed {
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width:700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .headerdiv {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .home{
+    display: none;
+  }
+
+  .header-collapsed{
+    display: none;
+  }
+}

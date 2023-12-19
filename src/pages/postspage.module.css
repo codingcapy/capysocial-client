@@ -1,0 +1,19 @@
+/*
+author: Paul Kim
+date: November 13, 2023
+version: 1.0
+description: posts page css for CapySocial
+ */
+
+.postsPage {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
